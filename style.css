@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+}
+body{
+  background: #5d5656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3{
+  color: #fff;
+}
+p{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+section{
+  display: flex;
+  background: #333131;
+  padding: 15px;
+  width: 1125px;
+  border-radius: 15px;
+}
+
+         /*  img section   */
+.img_section{
+  background-image: url(nature.jpg);
+  background-size: 100% 100%;
+  width: 50%;
+  border-radius: 15px;
+  position: relative;
+  opacity: 0.9;
+  /* z-index: 33; */
+}
+.img_section::after{
+  content: "";
+  background: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0.8;
+
+
+}
+.img_section .link{
+  text-align: right;
+  padding: 8px;
+}
+.img_section .link a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 30px;
+  background: #b1adad;
+  color: #fff;
+  font-size: 14px;
+}
+.img_section h2{
+  position: absolute;
+  top: auto;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -25%;
+  margin-bottom: 0;
+
+}
+.form_area{
+  width: 50%;
+  padding: 70px;
+  box-sizing: border-box;
+}
+.form_area h1{
+  font-size: 30px;
+  margin-bottom: 15PX;
+  font-weight: 600;
+}
+.form_area p{
+  color: #929090;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.form_area p a{
+  color: #929090;
+  font-size: 12px;
+  margin-left: 5px;
+  display: inline-block;
+}
+.form_area form{
+  width: 100%;
+  box-sizing: border-box;
+}
+.form_area input{
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #5d4d70;
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.form_area input[type='name']{ 
+  width: 48%;
+} 
+ .form_area input:first-child{
+   margin-right: 2%;
+}
+ .form_area input[type='email']{ 
+  width: 100%;
+} 
+ .form_area input[type='password']{ 
+  width: 100%;
+} 
+.form_area .password{
+  background: #5d4d70;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.form_area .password input{
+  padding-bottom: 0; 
+}
+.form_area i{
+  padding: 15px;
+  color: #929090;
+  font-size: 12px; 
+}
+input[type='checkbox']{
+  color: #000;
+}
+.form_area button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: rgb(132, 1, 255);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.psudo_element{
+  position: relative;
+}
+.psudo_element p{
+  text-align: center;
+  display: block;
+  
+}
+.psudo_element::before{
+  content: '';
+  width: 35%;
+  height: 1px;
+  background: #645d5d;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.psudo_element::after{
+  content: '';
+  width: 35%;
+  height: 1px;
+  background: #645d5d;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+.icon{
+  display: flex;
+  justify-content: space-between;
+  color: #aca6a6;
+  font-size: 14px;
+  
+}
+.google{
+  display: flex;
+  align-items: center;
+  width: 48%;
+  border: 1px solid #534b4b;
+  border-radius: 8px;
+}
+.google i{
+  color: #fff;
+  font-size: 14px;
+}
+.apple{
+  display: flex;
+  align-items: center;
+  width: 48%;
+  border: 1px solid #534b4b;
+  border-radius: 8px;
+  
+}
+.apple i{
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width:1200px) {
+  body{
+    width: 100%;
+  }
+  section{
+    width: 90%;
+  }
+}
+@media screen and (max-width:850px) {
+  .form_area{
+    padding: 20px;
+  }
+  .form_area h1{
+    font-size: 25px;
+  }
+  .form_area input[type='name']{ 
+    width: 100%;
+  } 
+   .form_area input:first-child{
+     margin-right: 0;
+  }
+  
+}
+@media screen and (max-width:550px) {
+body{
+  height: 100%;
+  align-items: flex-start;
+ 
+}
+section{
+  flex-direction: column;
+  
+  width: 100%;
+  
+}
+.img_section{
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: 100% 300px;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  opacity: 0.9;
+  /* z-index: 33; */
+}
+.form_area{
+  width: 100%;
+}
+  
+}
